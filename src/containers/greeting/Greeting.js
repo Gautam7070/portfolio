@@ -45,8 +45,8 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <Button
                     text="Download my resume"
-                    href={resume}
-                    download="Resume.pdf"
+                    href={greeting.resumeLink}
+                    newTab={true}
                   />
                 )}
               </div>
