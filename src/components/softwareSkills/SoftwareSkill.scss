@@ -13,19 +13,30 @@
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
-.software-skill-inline > i {
+.software-skill-inline>i,
+.software-skill-inline>span {
   color: $subTitle;
+  transition: all 0.2s ease-in-out;
 }
 
-.software-skill-inline > i:hover {
+.software-skill-inline:hover>i,
+.software-skill-inline:hover>span {
   color: $skillsColor;
 }
-.software-skill-inline > p {
+
+.software-skill-inline>p {
   color: $subTitle;
   font-size: 10px;
+  margin-top: 5px;
 }
-.software-skill-inline > i:hover ~ p {
+
+.software-skill-inline:hover>p {
   color: $skillsColor;
 }

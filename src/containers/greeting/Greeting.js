@@ -1,16 +1,18 @@
-import React, {useContext} from "react";
-import {Fade} from "react-reveal";
+import React, { useContext } from "react";
+import { Fade } from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
+import { illustration, greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import manOnTable from "../../assets/images/manOnTable.svg";
+import resume from "./resume.pdf";
 
 export default function Greeting() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -41,13 +43,11 @@ export default function Greeting() {
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
-                  <a
-                    href={require("./resume.pdf")}
+                  <Button
+                    text="Download my resume"
+                    href={resume}
                     download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
+                  />
                 )}
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Greeting() {
             ) : (
               <img
                 alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
+                src={manOnTable}
               ></img>
             )}
           </div>

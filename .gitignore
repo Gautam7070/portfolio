@@ -25,3 +25,12 @@ yarn-error.log*
 #user generated content
 public/profile.json
 public/blogs.json
+
+
+node_modules/
+.env
+build/
+dist/
+npm-debug.log*
+yarn-error.log*
+

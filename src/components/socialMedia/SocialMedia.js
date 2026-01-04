@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SocialMedia.scss";
-import {socialMediaLinks} from "../../portfolio";
+import { socialMediaLinks } from "../../portfolio";
 
-export default function socialMedia() {
+export default function SocialMedia() {
+  const [showEmail, setShowEmail] = useState(false);
+
   if (!socialMediaLinks.display) {
     return null;
   }
@@ -33,15 +35,21 @@ export default function socialMedia() {
       ) : null}
 
       {socialMediaLinks.gmail ? (
-        <a
-          href={`mailto:${socialMediaLinks.gmail}`}
-          className="icon-button google"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fas fa-envelope"></i>
-          <span></span>
-        </a>
+        <div className="gmail-container">
+          <a
+            href={`mailto:${socialMediaLinks.gmail}`}
+            className="icon-button google"
+            target="_top"
+            rel="noopener noreferrer"
+            onClick={() => setShowEmail(!showEmail)}
+          >
+            <i className="fas fa-envelope"></i>
+            <span></span>
+          </a>
+          <span className={`email-address-text ${showEmail ? "show" : ""}`}>
+            {socialMediaLinks.gmail}
+          </span>
+        </div>
       ) : null}
 
       {socialMediaLinks.gitlab ? (

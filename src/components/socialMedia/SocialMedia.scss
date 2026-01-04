@@ -2,30 +2,71 @@
 
 .social-media-div {
   font-size: 2em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px; // Standard spacing between icons
+  margin-bottom: 15px;
 }
 
 .icon-button {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
 .icon-button i {
   color: $textColorDark;
-  border-radius: 2.6rem;
+  border-radius: 50%;
   cursor: pointer;
-  display: inline-block;
-  font-size: 1.3rem;
-  height: 2.6rem;
-  line-height: 2.6rem;
-  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  height: 3.5rem;
+  width: 3.5rem;
   position: relative;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 2.6rem;
-  margin-bottom: 10px;
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in-out;
+}
+
+.gmail-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.email-address-text {
+  font-size: 1.1rem;
+  background-color: $google;
+  color: white;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 1.75rem;
+  margin-left: -50px; // Hide behind icon
+  z-index: -1;
+  opacity: 0;
+  transform: translateX(-10px) scaleX(0.8);
+  transform-origin: left;
+  max-width: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.4s ease,
+    max-width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    margin 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.5s ease;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.gmail-container:hover .email-address-text,
+.email-address-text.show {
+  opacity: 1;
+  max-width: 500px;
+  margin-left: 10px;
+  padding: 0 25px;
+  transform: translateX(0) scaleX(1);
+  box-shadow: 0 4px 15px rgba(219, 68, 55, 0.3);
 }
 
 .facebook i {
@@ -34,18 +75,35 @@
 
 .linkedin i {
   background-color: $linkedin;
+  animation: beat 2s infinite ease-in-out 0.5s;
 }
 
 .github i {
   background-color: $github;
+  animation: beat 2s infinite ease-in-out 1s;
+}
+
+.google i {
+  background-color: $google;
+  animation: beat 2s infinite ease-in-out;
 }
 
 .gitlab i {
   background-color: $gitlab;
 }
 
-.google i {
-  background-color: $google;
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .twitter i {
@@ -69,16 +127,7 @@
 }
 
 /* Hover Transition */
-.twitter i:hover,
-.google i:hover,
-.gitlab i:hover,
-.github i:hover,
-.linkedin i:hover,
-.facebook i:hover,
-.instagram i:hover,
-.stack-overflow i:hover,
-.kaggle i:hover,
-.medium i:hover {
+.icon-button i:hover {
   background-color: $textColor;
 }
 
