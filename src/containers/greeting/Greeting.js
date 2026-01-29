@@ -9,7 +9,7 @@ import Button from "../../components/button/Button";
 import { illustration, greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import manOnTable from "../../assets/images/manOnTable.svg";
-import resume from "./resume.pdf";
+
 
 export default function Greeting() {
   const { isDark } = useContext(StyleContext);
