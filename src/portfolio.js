@@ -57,10 +57,10 @@ const skillsSection = {
   subTitle: "Building Intelligent, Data-Driven and Secure Systems",
   skills: [
     emoji(
-      "⚡ AI & Data: Build data-driven applications and predictive systems using Python, FastAPI, NumPy, Pandas, Scikit-learn, Matplotlib, and Seaborn."
+      "⚡ AI & Data: Build data-driven applications, predictive systems, and high-performance retrieval architectures leveraging VectorDB, Python, FastAPI, and advanced ML libraries."
     ),
     emoji(
-      "⚡ Cybersecurity: Familiar with penetration testing and network analysis using Wireshark, Nmap, Burp Suite, and Metasploit."
+      "⚡ Cybersecurity: Knowledgeable in penetration testing, network analysis, and security auditing to identify and mitigate vulnerabilities."
     ),
     emoji(
       "⚡ Development Tools: Use GitHub and Linux for version control, collaboration, and development environments."
@@ -71,6 +71,10 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
+    {
+      skillName: "VectorDB",
+      iconifyTag: "logos:milvus"
+    },
     {
       skillName: "Python",
       iconifyTag: "logos:python"
@@ -107,22 +111,6 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "GitHub",
       iconifyTag: "logos:github-icon"
     },
-    {
-      skillName: "Wireshark",
-      iconifyTag: "simple-icons:wireshark"
-    },
-    {
-      skillName: "Nmap",
-      iconifyTag: "file-icons:nmap"
-    },
-    {
-      skillName: "Burp Suite",
-      iconifyTag: "simple-icons:burpsuite"
-    },
-    {
-      skillName: "Metasploit",
-      iconifyTag: "simple-icons:metasploit"
-    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -159,10 +147,6 @@ const techStack = {
     {
       Stack: "AI / Data Science / Machine Learning",
       progressPercentage: "80%"
-    },
-    {
-      Stack: "Cybersecurity (Pentesting/Networking)",
-      progressPercentage: "70%"
     },
     {
       Stack: "Backend (FastAPI/Python)",
