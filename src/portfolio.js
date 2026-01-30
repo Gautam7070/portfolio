@@ -15,6 +15,8 @@ import googleCybersecurityCert from "./assets/images/google_cybersecurity_cert.p
 import patentAchievement from "./assets/images/patent_achievement.png";
 import researchAchievement from "./assets/images/research_achievement.png";
 
+
+
 // Splash Screen
 
 const splashScreen = {
