@@ -2,8 +2,9 @@
 
 .card-image {
   max-width: 100%;
-  height: auto;
-  width: 250px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .card-title {
   color: $titleColor;
@@ -19,12 +20,15 @@
 }
 .project-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: $lightBackground2;
-  padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid $lightBorder1;
-  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
@@ -41,7 +45,12 @@
 }
 
 .project-detail {
-  text-align: center;
+  padding: 2rem;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
@@ -51,11 +60,18 @@
 }
 .project-image {
   position: relative;
-  height: 250px;
+  flex: 1;
+  height: auto;
+  min-height: 300px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
 }
 
 .projects-container {
@@ -83,6 +99,16 @@
 }
 
 @media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+  .project-image {
+    min-height: 200px;
+  }
+  .project-detail {
+    text-align: center;
+    padding: 1.5rem;
+  }
   .project-subtitle {
     font-size: 16px;
     text-align: center;

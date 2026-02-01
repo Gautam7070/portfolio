@@ -9,11 +9,11 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 import lpuLogo from "./assets/images/lpuLogo.png";
 import brabuLogo from "./assets/images/brabuLogo.png";
 import facebookLogo from "./assets/images/facebookLogo.png";
-import saayaHealthLogo from "./assets/images/saayaHealthLogo.webp";
-import nextuLogo from "./assets/images/nextuLogo.webp";
 import googleCybersecurityCert from "./assets/images/google_cybersecurity_cert.png";
 import patentAchievement from "./assets/images/patent_achievement.png";
 import researchAchievement from "./assets/images/research_achievement.png";
+import aiFeedbackPlatform from "./assets/images/aiFeedbackPlatform.png";
+import aiFeedbackAdmin from "./assets/images/aiFeedbackAdmin.png";
 
 
 
@@ -194,33 +194,32 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "AI-POWERED PLATFORMS AND DATA ANALYTICS SOLUTIONS",
   projects: [
     {
-      image: saayaHealthLogo,
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: aiFeedbackPlatform,
+      projectName: "AI Feedback Analysis Platform (User)",
+      projectDesc: "A complete AI-driven feedback management system with real-time analytics, automated risk scoring, and sentiment analysis. Features a premium glassmorphic dashboard for interactive data exploration.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://fynd-ai-assignment-user-dashboard.vercel.app/"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
-      image: nextuLogo,
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: aiFeedbackAdmin,
+      projectName: "AI Feedback Analysis Platform (Admin)",
+      projectDesc: "An advanced administrative command center for the AI Feedback platform. Provides deep insights into user sentiment, system performance, and automated moderation actions.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
+          url: "https://fynd-ai-assignment-admin-dashboard.vercel.app/"
         }
       ]
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
