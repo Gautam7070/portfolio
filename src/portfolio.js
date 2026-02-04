@@ -14,6 +14,7 @@ import patentAchievement from "./assets/images/patent_achievement.png";
 import researchAchievement from "./assets/images/research_achievement.png";
 import aiFeedbackPlatform from "./assets/images/aiFeedbackPlatform.png";
 import aiFeedbackAdmin from "./assets/images/aiFeedbackAdmin.png";
+import aqiProject from "./assets/images/aqiProject.png";
 
 
 
@@ -60,9 +61,6 @@ const skillsSection = {
   skills: [
     emoji(
       "⚡ AI & Data: Build data-driven applications, predictive systems, and high-performance retrieval architectures leveraging VectorDB, Python, FastAPI, and advanced ML libraries."
-    ),
-    emoji(
-      "⚡ Cybersecurity: Knowledgeable in penetration testing, network analysis, and security auditing to identify and mitigate vulnerabilities."
     ),
     emoji(
       "⚡ Development Tools: Use GitHub and Linux for version control, collaboration, and development environments."
@@ -193,7 +191,7 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
+  title: "Projects",
   subtitle: "AI-POWERED PLATFORMS AND DATA ANALYTICS SOLUTIONS",
   projects: [
     {
@@ -215,6 +213,17 @@ const bigProjects = {
         {
           name: "Visit Website",
           url: "https://fynd-ai-assignment-admin-dashboard.vercel.app/"
+        }
+      ]
+    },
+    {
+      image: aqiProject,
+      projectName: "AQI Precision Calculator",
+      projectDesc: "A high-precision Air Quality Index calculator that provides real-time, granular AQI data based on pollutant concentrations. Features a modern dark-themed dashboard with seamless city searching and instant results.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://aqi-frontend-tawny.vercel.app/"
         }
       ]
     }
